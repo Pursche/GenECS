@@ -12,5 +12,9 @@
 	],
 	"preBuildCommands-linux": [
 		"./../precompiler.sh"
-	]
+	],
+	"dependencies": {
+		"derelict-sfml2": "~>4.0.0-beta.2"
+	},
+	"targetPath": "bin"
 }
