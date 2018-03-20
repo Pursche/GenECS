@@ -1,0 +1,16 @@
+{
+	"name": "genecs",
+	"authors": [
+		"Markus Pursche",
+		"Andreas Vennström"
+	],
+	"description": "An introspected and compiletime generated Entity Component System (ECS)",
+	"copyright": "Copyright © 2018, Markus Pursche",
+	"license": "MIT",
+	"preBuildCommands-windows": [
+		"precompiler.bat"
+	],
+	"preBuildCommands-linux": [
+		"./../precompiler.sh"
+	]
+}

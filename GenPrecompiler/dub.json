@@ -1,0 +1,11 @@
+{
+	"name": "genecsprecompiler",
+	"authors": [
+		"Markus Pursche",
+		"Andreas Vennström"
+	],
+	"description": "A precompiler for GenECS",
+	"copyright": "Copyright © 2018, Markus Pursche",
+	"license": "MIT",
+	"targetType": "executable"
+}
