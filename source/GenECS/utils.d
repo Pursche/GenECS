@@ -1,6 +1,7 @@
 module GenECS.utils;
 
 import std.traits;
+import core.stdc.string;
 
 import GenECS.__generated__.includes;
 
@@ -59,7 +60,11 @@ template SOA(Struct)
         public this(size_t capacity)
         {
             foreach (I, TYPE; typeof(Struct.tupleof))
+            {
                 mixin(MEMBERNAME!I ~ " = new "~TYPE.stringof~"[capacity];");
+                // not needed but good for debugging
+                mixin("memset(" ~ MEMBERNAME!I ~ ".ptr, 0, (" ~ TYPE.stringof ~ ").sizeof * " ~ MEMBERNAME!I ~ ".length);");
+            }
         }
 
         public void Copy(size_t src, size_t dst)

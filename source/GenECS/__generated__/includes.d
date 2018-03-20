@@ -1,12 +1,16 @@
 module GenECS.__generated__.includes;
 
+public import GenECS.systems.sprite;
 public import GenECS.systems.transform;
+public import GenECS.components.sprite;
 public import GenECS.components.transform;
 enum SystemModules = [
+"GenECS.systems.sprite",
 "GenECS.systems.transform"
 ];
 
 enum ComponentModules = [
+"GenECS.components.sprite",
 "GenECS.components.transform"
 ];
 
